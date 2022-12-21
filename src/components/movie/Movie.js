@@ -115,7 +115,7 @@ export const Movie = () => {
         height="515"
         src={
           !movie.trailerLink
-            ? "https://www.youtube-nocookie.com/embed/4Lp-Vc4i2QI"
+            ? "https://www.youtube-nocookie.com/embed/jI43olQy0ZE"
             : movie.trailerLink
         }
         title={movie.name}
@@ -127,7 +127,8 @@ export const Movie = () => {
         <div className="content">
           <h1>{movie.name}</h1>
           <p>{movie.description}</p>
-          <div className="staff-list">
+          <div className="staff-list"><br/>
+            <h5>Elenco</h5>
             {movie.staffList && movie.staffList.length > 0
               ? movie.staffList.map((staff, idx) => (
                   <p key={idx}>
@@ -136,7 +137,8 @@ export const Movie = () => {
                 ))
               : "No hay elenco definido"}
           </div>
-          <div className="category-list">
+          <div className="category-list"><br/>
+            <h5>Categoría</h5>
             {movie.categories && movie.categories.length > 0
               ? movie.categories.map((staff, idx) => (
                   <p key={idx}>
@@ -145,20 +147,23 @@ export const Movie = () => {
                 ))
               : "No hay categorías definidas"}
           </div>
-          <div className="rate">
-            <p>Calificar pelicula</p>
+          <div className="rate"><br/>
+            <h5>Calificar pelicula</h5>
             <select value={scoreSelected} onChange={sendScore}>
               <option>Sin calificar</option>
               {score.map((element, idx) => (
                 <option key={idx}>{element}</option>
               ))}
             </select>
-            <button
+            <div className="Mylist"><br/>
+            <button 
               onClick={handleAddList}
               className={isActive ? "active" : ""}
             >
               Agregar a mi lista
             </button>
+            </div>
+            
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ export const Content = () => {
           staffList={movie.staffList}
           image={
             !movie.imageLink
-              ? "https://picsum.photos/seed/picsum/200/300"
+              ? "https://api.lorem.space/image?w=150&h=180"
               : movie.imageLink
           }
           id={movie.id}
