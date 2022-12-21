@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import logo from "../../assets/img/netflix.webp";
+import logo from "../../assets/img/Logo-StartMovie.png";
 import { isAuth } from "../../util/Util";
 import { TopMenu } from "../menu/TopMenu";
 import "./Header.css";
