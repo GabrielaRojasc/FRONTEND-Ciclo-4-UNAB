@@ -82,7 +82,7 @@ export const Movie = () => {
 
   const setScoreData = () => {
     const scores = [];
-    for (let index = 1; index <= 10; index++) {
+    for (let index = 1; index <= 5; index++) {
       scores.push(index);
     }
     setScore(scores);
